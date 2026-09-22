@@ -1,1 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  /* background colours  */
+  --color-bg-page: #020617;
+  --color-bg-secondary: #0f172a;
+  --color-bg-card: rgba(26, 26, 46, 0.45);
+  --color-badge: rgba(0, 212, 255, 0.3);
+  --color-badge-hover: rgba(0, 212, 255, 0.5);
+
+  /* text colours  */
+  --color-text-main: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-body: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* accents  */
+  --color-accent: #22d3ee;
+  --color-bright-accent: #67e8f9;
+
+  /* fonts family  */
+  --font-main: "Merriweather", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* border colours  */
+  --color-card-border: rgba(0, 212, 255, 0.3);
+  --color-card-hover: rgba(0, 212, 255, 0.5);
+
+  /* buttons text colours */
+  --color-button-text-primary: #000000;
+  --color-button-text-secondary: #ffffff;
+
+  /* shadows  */
+  --shadow-card:
+    0 0 20px rgba(0, 212, 255, 0.4), 0 0 40px rgba(0, 212, 255, 0.3);
+  --shadow-button:
+    0 0 10px rgba(0, 212, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.3);
+
+  /* text shadow  */
+  --text-shadow-glow:
+    0 0 1px #ffffff, 0 0 2px #67e8f9, 0 0 8px rgba(34, 211, 238, 0.6);
+}
