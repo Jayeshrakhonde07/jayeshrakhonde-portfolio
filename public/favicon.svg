@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFFF"/>
+      <stop offset="100%" stop-color="#0083B0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Tile -->
+  <rect width="512" height="512" rx="110" fill="#0B131E"/>
+
+  <!-- Merged J-R Monoline Form -->
+  <g fill="none" stroke="url(#cyanNeon)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round">
+    <!-- J Hook -->
+    <path d="M 120 310 C 120 365 160 380 205 380 C 250 380 260 345 260 300 L 260 130"/>
+    
+    <!-- R Loop & Leg -->
+    <path d="M 260 130 L 340 130 C 390 130 405 165 405 210 C 405 255 375 275 330 275 L 260 275"/>
+    <path d="M 325 275 L 395 380"/>
+  </g>
+</svg>
