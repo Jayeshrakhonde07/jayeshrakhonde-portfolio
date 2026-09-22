@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full sticky top-0  px-6 md:px-10 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu">
+      <header className="w-full sticky top-0  px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu">
         <nav className="max-w-7xl  mx-auto  h-16 flex items-center justify-between">
           <a
             href="#home"
@@ -37,6 +38,8 @@ const Navbar = () => {
                 </a>
               );
             })}
+
+            <a href="#contact" className="bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary shadow-button  border border-card-border transition duration-500 ">Let's Talk  <FaArrowRightFromBracket className="hover:translate-x-1 transition duration-500"/> </a>
           </div>
 
           {/* mobile menu button  */}
@@ -71,7 +74,11 @@ const Navbar = () => {
                   {link.name}
                 </a>
               );
+                      
             })}
+          
+                  <a href="#contact" onClick={() => setMenu(false)} className="bg-accent flex items-center justify-center gap-2 px-6 py-2  rounded-md text-button-text-primary font-bold hover:text-button-text-secondary shadow-button  border border-card-border transition duration-500 ">Let's Talk <FaArrowRightFromBracket className="hover:translate-x-1 transition duration-500"/></a>
+          
           </div>
         </div>
       </header>
