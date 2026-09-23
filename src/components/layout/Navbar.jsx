@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
@@ -39,7 +40,13 @@ const Navbar = () => {
               );
             })}
 
-            <a href="#contact" className="bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  border border-card-border transition duration-500 ">Let's Talk  <FaArrowRightFromBracket className="hover:translate-x-1 transition duration-500"/> </a>
+            <a
+              href="#contact"
+              className="bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  border border-card-border transition duration-500 "
+            >
+              Let's Talk{" "}
+              <FaArrowRightFromBracket className="hover:translate-x-1 transition duration-500" />{" "}
+            </a>
           </div>
 
           {/* mobile menu button  */}
@@ -74,11 +81,16 @@ const Navbar = () => {
                   {link.name}
                 </a>
               );
-                      
             })}
-          
-                  <a href="#contact" onClick={() => setMenu(false)} className="bg-accent flex items-center justify-center gap-2 px-6 py-2  rounded-md text-button-text-primary font-bold hover:text-button-text-secondary shadow-button  border border-card-border transition duration-500 ">Let's Talk <FaArrowRightFromBracket className="hover:translate-x-1 transition duration-500"/></a>
-          
+
+            <a
+              href="#contact"
+              onClick={() => setMenu(false)}
+              className="group bg-accent flex items-center justify-center gap-2 px-4 py-2  rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  active:text-button-text-secondary active:shadow-button border border-card-border transition duration-500 "
+            >
+              Let's Talk{" "}
+              <FaArrowRightFromBracket className="group-hover:translate-x-1 transition-transform duration-500" />
+            </a>
           </div>
         </div>
       </header>

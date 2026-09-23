@@ -7,14 +7,13 @@ import Projects from './components/sections/Projects'
 import Certifications from './components/sections/Certifications'
 import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
-
-
+import resume from '../public/resume/Jayesh_Rakhonde_Resume.pdf'
 const App = () => {
   return (
    <>
    <Navbar />
-   {/* <Hero />
-   <About />
+   {<Hero resume = {resume} />
+   /* <About />
    <Skills />
    <Projects />
    <Certifications />
