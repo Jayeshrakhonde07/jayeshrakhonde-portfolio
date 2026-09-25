@@ -15,11 +15,12 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <>
+  
       <header className="w-full fixed top-0  px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu">
         <nav className="max-w-7xl  mx-auto  h-16 flex items-center justify-between">
           <a
             href="#home"
+            onClick={() => setMenu(false)}
             className="text-3xl font-heading font-bold text-accent hover:text-bright-accent transition duration-300"
           >
             JR
@@ -83,7 +84,7 @@ const Navbar = () => {
             })}
 
             <a
-              href="contact"
+              href="#contact"
               onClick={() => setMenu(false)}
               className="group bg-accent flex items-center justify-center gap-2 px-4 py-2  rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  active:text-button-text-secondary active:shadow-button border border-card-border transition duration-500 "
             >
@@ -93,7 +94,7 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-    </>
+
   );
 };
 

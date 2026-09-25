@@ -49,10 +49,10 @@ const Hero = () => {
               {hero.personal.name}
             </h1>
             <h2 className="text-accent min-h-12 text-2xl md:text-3xl lg:text-4xl font-medium my-3">
-              {displayText} <span className="animate-pulse">|</span>
+              {displayText} <span className="animate-pulse" aria-hidden="true">|</span>
             </h2>
-            <p className="text-text-body max-w-xl text-justify leading-relaxed md:text-left">
-              {" "}
+            <p className="text-text-body max-w-xl leading-relaxed text-center md:text-left">
+          
               IT student focused on building modern, responsive web
               applications. I enjoy creating clean user interfaces, solving
               development problems, and improving my skills by working on
@@ -62,10 +62,10 @@ const Hero = () => {
             {/* hero buttons  */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
               <a
-                href="projects"
+                href="#projects"
                 className="group bg-accent px-5 py-2.5 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold  hover:shadow-button hover:text-text-main transition duration-500"
               >
-                View Projects{" "}
+                View Projects
                 <FaArrowRight className="group-hover:translate-x-1 transition duration-500" />{" "}
               </a>
               <a
@@ -101,6 +101,7 @@ const Hero = () => {
           {/* profile images with particles */}
           <div className="flex items-center justify-center md:justify-end">
             <div className="relative">
+              
               {/* particles  */}
               {hero.particles.map((particle, index) => (
                 <span
@@ -127,7 +128,7 @@ const Hero = () => {
                 <div className="w-70 h-70 md:w-80 md:h-80">
                   <img
                     src={hero.personal.profile}
-                    alt="Jayesh Rakhonde - Frontend Developer"
+                    alt="Jayesh Rakhonde"
                     loading="eager"
                     fetchPriority="high"
                     className="w-full h-full rounded-full object-cover"

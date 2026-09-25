@@ -1,4 +1,3 @@
-import React from 'react'
 import SectionTitle from '../common/SectionTitle'
 import UsePortfolio from "../../hooks/UsePortfolio";
 const About = () => {
@@ -54,7 +53,7 @@ const About = () => {
               {about.services.map((service)=>{
                 return(
                   <div key={service.feature} className='bg-bg-card border border-card-border rounded-md p-2 text-center hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500' >
-                    <h1 className='text-3xl font-medium text-accent'>{service.number}</h1>
+                    <span className='text-3xl font-medium text-accent'>{service.number}</span>
                     <p className='text-text-body'>{service.feature}</p>
                   </div>
                 )
