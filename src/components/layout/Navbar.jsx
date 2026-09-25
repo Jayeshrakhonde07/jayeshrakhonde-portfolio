@@ -15,7 +15,6 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-  
     <>
       <header className="w-full fixed top-0  px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu">
         <nav className="max-w-7xl  mx-auto  h-16 flex items-center justify-between">
@@ -54,7 +53,7 @@ const Navbar = () => {
             onClick={() => setMenu(!menu)}
             aria-label={menu ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menu}
-            className="md:hidden flex text-2xl text-accent active:text-bright-accent font-bold transition duration-500"
+            className="md:hidden flex text-2xl text-accent border border-card-border p-2.5 rounded-full active:text-bright-accent font-bold transition duration-500 "
           >
             {menu ? <RxCross1 /> : <FaBars />}
           </button>
@@ -63,7 +62,7 @@ const Navbar = () => {
         {/* mobile menu  */}
 
         <div
-          className={`md:hidden absolute left-0 top-full w-full bg-bg-page/95 backdrop-blur-md border-b border-card-border py-4 overflow-hidden transition-all duration-500 ease-in-out shadow-mobile-menu ${
+          className={`md:hidden absolute left-0 top-full w-full bg-bg-page/98 backdrop-blur-md border-b border-card-border py-4 overflow-hidden transition-all duration-500 ease-in-out shadow-mobile-menu ${
             menu
               ? "max-h-96 opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-3"

@@ -7,7 +7,7 @@ const About = () => {
 
 
   return (
-    <section className='min-h-screen flex items-center  px-6 md:px-8 lg:px-10 py-20 md:py-18' id='about'>
+    <section className='min-h-screen flex items-center  px-6 md:px-8 lg:px-10 py-20' id='about'>
 
       <div className='max-w-7xl mx-auto w-full '>
         {/* heading component  */}
@@ -25,7 +25,7 @@ const About = () => {
               <p className='text-text-body text-justify [hyphens:auto] mb-4'>I’m currently focused on Frontend Development and enjoy building clean, responsive, and easy-to-use interfaces. I work with <span className='text-text-main font-medium'>HTML, CSS, JavaScript, Tailwind CSS, and React</span>, and I’m also improving my Java and problem-solving skills. Alongside frontend development, I’ve started learning <span className='text-accent font-medium'>Node.js and backend development</span> because I want to understand how a complete web application works, not just the part users see.</p>
 
               <p className='text-text-body text-justify [hyphens:auto] '>I’ve built projects like a <span className='text-text-main font-medium'>Mini Spotify Clone, Calculator, Tic-Tac-Toe, and NexCart E-Commerce</span>. These projects have helped me improve my coding skills, and I’m currently learning backend development with Node.js while growing as a <span className='text-accent font-medium'>Frontend Developer</span>.</p>
-          </div>
+          </div> 
 
           {/* right content  */}
           <div className='flex flex-col gap-4'>

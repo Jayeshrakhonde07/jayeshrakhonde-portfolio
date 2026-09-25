@@ -113,7 +113,7 @@ const Hero = () => {
                           animate-particle
                           pointer-events-none
                           shadow-[0_0_10px_rgba(0,212,255,0.8)]
-                        `}
+                        `} 
                   style={{
                     top: particle[0],
                     left: particle[1],
