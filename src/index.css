@@ -26,8 +26,8 @@
   --font-title: "Space Grotesk", serif;
 
   /* border colours  */
-  --color-card-border: rgba(0, 212, 255, 0.3);
-  --color-card-hover: rgba(0, 212, 255, 0.6);
+  --color-card-border: rgba(0, 212, 255, 0.4);
+  --color-card-hover: rgba(0, 212, 255, 0.8);
 
   /* buttons text colours */
   --color-button-text-primary: #000000;
@@ -35,10 +35,10 @@
 
   /* shadows  */
   --shadow-desktop-menu:
-    0 0 1px rgba(0, 212, 255, 0.6), 0 0 12px rgba(0, 212, 255, 0.25);
+    0 0 2px rgba(0, 212, 255, 0.6), 0 0 15px rgba(0, 212, 255, 0.25);
   --shadow-mobile-menu: 0 8px 10px -10px rgba(0, 212, 255, 0.4);
   --shadow-card:
-    0 0 20px rgba(0, 212, 255, 0.4), 0 0 40px rgba(0, 212, 255, 0.3);
+    0 0 12px rgba(0, 212, 255, 0.3), 0 0 15px rgba(0, 212, 255, 0.3);
   --shadow-button:
     0 0 10px rgba(0, 212, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.3);
 

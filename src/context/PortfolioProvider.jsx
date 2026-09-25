@@ -1,9 +1,11 @@
 import PortfolioContext from "../context/PortfolioContext";
 import hero from "../data/hero";
+import about from "../data/about"
 const PortfolioProvider = ({ children }) => {
     
   const portfolioData = {
     hero,
+    about,
   };
 
   return (

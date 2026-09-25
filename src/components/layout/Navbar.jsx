@@ -15,8 +15,9 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
+  
     <>
-      <header className="w-full sticky top-0  px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu">
+      <header className="w-full fixed top-0  px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu">
         <nav className="max-w-7xl  mx-auto  h-16 flex items-center justify-between">
           <a
             href="#home"
@@ -40,11 +41,11 @@ const Navbar = () => {
             })}
 
             <a
-              href="#contact"
-              className="bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  border border-card-border transition duration-500 "
+              href="contact"
+              className="group bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  border border-card-border transition duration-500 "
             >
               Let's Talk{" "}
-              <FaArrowRightFromBracket className="hover:translate-x-1 transition duration-500" />{" "}
+              <FaArrowRightFromBracket className="group-hover:translate-x-1 transition duration-500" />{" "}
             </a>
           </div>
 
@@ -83,7 +84,7 @@ const Navbar = () => {
             })}
 
             <a
-              href="#contact"
+              href="contact"
               onClick={() => setMenu(false)}
               className="group bg-accent flex items-center justify-center gap-2 px-4 py-2  rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  active:text-button-text-secondary active:shadow-button border border-card-border transition duration-500 "
             >
