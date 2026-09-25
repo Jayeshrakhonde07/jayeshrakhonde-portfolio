@@ -26,8 +26,8 @@
   --font-title: "Space Grotesk", serif;
 
   /* border colours  */
-  --color-card-border: rgba(0, 212, 255, 0.4);
-  --color-card-hover: rgba(0, 212, 255, 0.8);
+  --color-card-border: rgba(0, 212, 255, 0.3);
+  --color-card-hover: rgba(0, 212, 255, 0.5);
 
   /* buttons text colours */
   --color-button-text-primary: #000000;
