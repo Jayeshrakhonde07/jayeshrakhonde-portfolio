@@ -41,10 +41,10 @@ const Navbar = () => {
             })}
 
             <a
-              href="contact"
+              href="#contact"
               className="group bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button  border border-card-border transition duration-500 "
             >
-              Let's Talk{" "}
+              Let's Talk
               <FaArrowRightFromBracket className="group-hover:translate-x-1 transition duration-500" />{" "}
             </a>
           </div>

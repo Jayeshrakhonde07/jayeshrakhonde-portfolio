@@ -12,10 +12,13 @@ const projects = [
       "Play and pause audio tracks",
       "Responsive design for different screen sizes",
     ],
-    technologies: ["HTML", "CSS", "Javascript","Tailwind", "React", "Nodejs","Express", "MongoDB",],
+    technologies: ["HTML", "CSS", "Javascript"],
     liveDemo: "https://spotify-clone-puce-six.vercel.app/",
     github: "https://github.com/Jayeshrakhonde07/Spotify-Clone.git",
   },
+  
+
+
   
 ];
 

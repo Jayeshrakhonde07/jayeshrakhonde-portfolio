@@ -11,7 +11,7 @@ const Skills = () => {
     >
       <div className="max-w-7xl mx-auto w-full ">
         <SectionTitle
-          title={"My Skills"}
+          title={"Technical Skills"}
           subtitle={"Technologies I "}
           spantitle={"work with"}
         />
