@@ -73,20 +73,24 @@ const Projects = () => {
 
                   {/* project buttons  */}
                   <div className="flex items-center justify-center gap-4 mt-1">
+                    
+                    {/* live demo  */}
                     <a
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-1 items-center justify-center gap-3 bg-accent px-4 py-2 rounded-md text-button-text-primary font-semibold hover:text-button-text-secondary hover:shadow-button transition duration-500"
+                      className="flex flex-1 items-center justify-center gap-3 bg-accent px-4 py-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button transition duration-500"
                     >
                       Live Demo <FaArrowUpRightFromSquare className="text-sm" />
                     </a>
+                    
+                    {/* github repo  */}
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View ${project.title} source code on GitHub`}
-                      className="text-2xl border border-card-border p-3 rounded-full hover:text-accent hover:shadow-button transition duration-500"
+                      className="text-2xl border border-card-border p-3 rounded-full hover:text-accent  hover:border-card-hover transition duration-500"
                     >
                       <FaGithub />
                     </a>

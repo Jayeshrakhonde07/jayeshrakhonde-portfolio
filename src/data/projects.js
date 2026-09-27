@@ -6,7 +6,7 @@ const projects = [
     image: spotifyimg,
     title: "Mini Spotify",
     description:
-      "Spotify-inspired music player with responsive UI and audio playback controls.",
+      "Spotify-inspired music player with responsive UI .",
     features: [
       "Spotify-inspired music player interface",
       "Play and pause audio tracks",

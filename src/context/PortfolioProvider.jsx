@@ -3,13 +3,15 @@ import hero from "../data/hero";
 import about from "../data/about"
 import skills from "../data/skills";
 import projects from "../data/projects";
+import certifications from "../data/certifications";
 const PortfolioProvider = ({ children }) => {
     
   const portfolioData = {
     hero,
     about,
     skills,
-    projects
+    projects,
+    certifications
   };
 
   return (
