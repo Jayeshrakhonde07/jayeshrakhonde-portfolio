@@ -6,14 +6,13 @@ import UsePortfolio from "../../hooks/UsePortfolio";
 const Hero = () => {
   const { hero } = UsePortfolio();
 
-  const roles = ["Frontend Developer", "Java Developer"];
-
   // role changing animation
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    const roles = ["Frontend Developer", "Java Developer"];
     const currentRole = roles[roleIndex];
 
     if (!isDeleting && displayText === currentRole) {
@@ -38,10 +37,12 @@ const Hero = () => {
   }, [displayText, isDeleting, roleIndex]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-8 lg:px-10 py-25" id="home">
+    <section
+      className="min-h-screen flex items-center justify-center px-6 md:px-8 lg:px-10 py-25"
+      id="home"
+    >
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
           {/* left content  */}
           <div className=" text-center md:text-left">
             <p className="text-text-muted">Hello, I am</p>
@@ -49,10 +50,12 @@ const Hero = () => {
               {hero.personal.name}
             </h1>
             <h2 className="text-accent min-h-12 text-2xl md:text-3xl lg:text-4xl font-medium my-3">
-              {displayText} <span className="animate-pulse" aria-hidden="true">|</span>
+              {displayText}{" "}
+              <span className="animate-pulse" aria-hidden="true">
+                |
+              </span>
             </h2>
             <p className="text-text-body max-w-xl leading-relaxed text-center md:text-left">
-          
               IT student focused on building modern, responsive web
               applications. I enjoy creating clean user interfaces, solving
               development problems, and improving my skills by working on
@@ -101,7 +104,6 @@ const Hero = () => {
           {/* profile images with particles */}
           <div className="flex items-center justify-center md:justify-end">
             <div className="relative">
-              
               {/* particles  */}
               {hero.particles.map((particle, index) => (
                 <span
@@ -114,7 +116,7 @@ const Hero = () => {
                           animate-particle
                           pointer-events-none
                           shadow-[0_0_10px_rgba(0,212,255,0.8)]
-                        `} 
+                        `}
                   style={{
                     top: particle[0],
                     left: particle[1],
