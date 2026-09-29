@@ -98,26 +98,43 @@ body {
   }
 }
 
-/* Toast responsive on mobile */
+/* Toast message  */
 .responsive-toast {
-  width: auto;
-  max-width: 380px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  font-size: 14px;
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   .Toastify__toast-container {
-    width: calc(100% - 24px);
-    left: 12px;
-    right: 12px;
-    top: 12px;
+    width: 100%;
+    padding: 0 16px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
   }
 
   .responsive-toast {
     width: 100%;
-    max-width: none;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    font-size: 14px;
+    max-width: 100%;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+}
+
+/* loading  */
+.animate-loading {
+  width: 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+/* loader animation keyframe */
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
   }
 }
