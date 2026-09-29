@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import UsePortfolio from "../../hooks/UsePortfolio";
@@ -44,7 +45,16 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* left content  */}
-          <div className=" text-center md:text-left">
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="text-center md:text-left"
+          >
             <p className="text-text-muted">Hello, I am</p>
             <h1 className="text-text-main text-3xl md:text-4xl lg:text-6xl font-heading font-bold mb-2 text-shadow-glow">
               {hero.personal.name}
@@ -64,21 +74,25 @@ const Hero = () => {
 
             {/* hero buttons  */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
-              <a
+              <motion.a
                 href="#projects"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 className="group bg-accent px-5 py-2.5 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold  hover:shadow-button hover:text-text-main transition duration-500"
               >
                 View Projects
                 <FaArrowRight className="group-hover:translate-x-1 transition duration-500" />{" "}
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={hero.personal.resume}
                 download="Jayesh_Rakhonde_Resume.pdf"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 className="group bg-bg-secondary px-5 py-2.5 flex items-center justify-center gap-2 font-medium text-accent border border-card-border rounded-md hover:bg-accent hover:text-button-text-secondary hover:shadow-button transition duration-500"
               >
                 Download Resume
                 <FiDownload className="group-hover:translate-y-1 transition duration-500" />
-              </a>
+              </motion.a>
             </div>
 
             {/* social links  */}
@@ -86,23 +100,37 @@ const Hero = () => {
               {hero.socialLinks.map((link) => {
                 const Icons = link.icon;
                 return (
-                  <a
+                  <motion.a
                     key={link.label}
                     href={link.href}
                     rel="noopener noreferrer"
                     target="_blank"
                     aria-label={link.label}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    whileHover={{ y: -4, scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
                     className="bg-bg-card p-2 text-2xl text-accent border border-card-border rounded-full hover:text-text-main hover:bg-accent hover:border-card-hover hover:shadow-button  transition duration-500"
                   >
                     <Icons />
-                  </a>
+                  </motion.a>
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
           {/* profile images with particles */}
-          <div className="flex items-center justify-center md:justify-end">
+          <motion.div
+            initial={{ opacity: 0, x: 60, scale: 0.85 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.35,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="flex items-center justify-center md:justify-end"
+          >
             <div className="relative">
               {/* particles  */}
               {hero.particles.map((particle, index) => (
@@ -126,7 +154,17 @@ const Hero = () => {
               ))}
 
               {/* profile image */}
-              <div className="border-4 border-accent rounded-full animate-float shadow-card">
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="border-4 border-accent rounded-full animate-float shadow-card"
+              >
                 <div className="w-70 h-70 md:w-80 md:h-80">
                   <img
                     src={hero.personal.profile}
@@ -136,9 +174,9 @@ const Hero = () => {
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

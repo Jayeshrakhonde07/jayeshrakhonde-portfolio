@@ -9,16 +9,9 @@ const hero = {
     profile: profileImg,
   },
 
- roles : [
-    "Full-Stack Web Developer",
-    "MERN Stack Developer",
-    "UI/UX Designer",
-    "Java Developer",
-  ],
-
   socialLinks: [
     {
-      icon: FaGithub ,
+      icon: FaGithub,
       href: "https://github.com/Jayeshrakhonde07",
       label: "GitHub",
     },
@@ -34,7 +27,7 @@ const hero = {
     },
   ],
 
-    particles :[
+  particles: [
     ["5%", "-8%", "0s", "w-2 h-2", "bg-[#00d4ff]"],
     ["15%", "105%", "0.8s", "w-1.5 h-1.5", "bg-white"],
     ["40%", "-15%", "1.4s", "w-1.5 h-1.5", "bg-[#00d4ff]"],
@@ -43,7 +36,7 @@ const hero = {
     ["78%", "100%", "2.2s", "w-1 h-1", "bg-[#00d4ff]"],
     ["28%", "95%", "1.1s", "w-1 h-1", "bg-white"],
     ["55%", "-5%", "2.5s", "w-1 h-1", "bg-white"],
-  ]
+  ],
 };
 
 export default hero;
