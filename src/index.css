@@ -97,3 +97,27 @@ body {
     opacity: 0;
   }
 }
+
+/* Toast responsive on mobile */
+.responsive-toast {
+  width: auto;
+  max-width: 380px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .Toastify__toast-container {
+    width: calc(100% - 24px);
+    left: 12px;
+    right: 12px;
+    top: 12px;
+  }
+
+  .responsive-toast {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+}
