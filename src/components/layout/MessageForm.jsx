@@ -11,7 +11,6 @@ const MessageForm = () => {
     message: "",
   });
 
-  const [status, setStatus] = useState("");
   const [isSending, setIsSending] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +29,10 @@ const MessageForm = () => {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("EmailJS environment variables are missing.");
+      }
 
       await emailjs.send(
         serviceId,
@@ -54,7 +57,7 @@ const MessageForm = () => {
         message: "",
       });
     } catch (error) {
-      console.log("EmailJS Error:", error);
+      console.error("EmailJS Error:", error);
       toast.update(toastId, {
         render: "Failed to send message. Please try again.",
         type: "error",
