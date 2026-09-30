@@ -75,7 +75,7 @@ const MessageForm = () => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-   viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
+        viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
       >
@@ -100,10 +100,17 @@ const MessageForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.1 }}
             >
-              <label htmlFor="name" className="block mb-2 font-medium">
+              <motion.label
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3 }}
+                htmlFor="name"
+                className="block mb-2 font-medium"
+              >
                 Name
-              </label>
-              <input
+              </motion.label>
+              <motion.input
                 name="user_name"
                 type="text"
                 id="name"
@@ -113,6 +120,14 @@ const MessageForm = () => {
                 placeholder="Enter Your Name"
                 onChange={handleChange}
                 required
+                whileFocus={{
+                  scale: 1.01,
+                  y: -1,
+                }}
+                whileHover={{
+                  borderColor: "rgba(0, 212, 255, 0.8)",
+                }}
+                transition={{ duration: 0.2 }}
               />
             </motion.div>
 
@@ -122,10 +137,20 @@ const MessageForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.2 }}
             >
-              <label htmlFor="email" className="block mb-2 font-medium">
+              <motion.label
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.3,
+                  delay: 0.1,
+                }}
+                htmlFor="email"
+                className="block mb-2 font-medium"
+              >
                 Email
-              </label>
-              <input
+              </motion.label>
+              <motion.input
                 name="user_email"
                 type="email"
                 id="email"
@@ -135,6 +160,14 @@ const MessageForm = () => {
                 placeholder="Enter Your Email"
                 onChange={handleChange}
                 required
+                whileFocus={{
+                  scale: 1.01,
+                  y: -1,
+                }}
+                whileHover={{
+                  borderColor: "rgba(0, 212, 255, 0.8)",
+                }}
+                transition={{ duration: 0.2 }}
               />
             </motion.div>
           </div>
@@ -145,10 +178,18 @@ const MessageForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.3 }}
           >
-            <label htmlFor="subject" className="block mb-2 font-medium">
+            <motion.label
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: 0.65,
+              }}
+              htmlFor="subject"
+              className="block mb-2 font-medium"
+            >
               Subject
-            </label>
-            <input
+            </motion.label>
+            <motion.input
               name="subject"
               type="text"
               id="subject"
@@ -158,6 +199,14 @@ const MessageForm = () => {
               placeholder="Enter Subject"
               onChange={handleChange}
               required
+              whileFocus={{
+                scale: 1.01,
+                y: -1,
+              }}
+              whileHover={{
+                borderColor: "rgba(0, 212, 255, 0.8)",
+              }}
+              transition={{ duration: 0.2 }}
             />
           </motion.div>
 
@@ -167,10 +216,10 @@ const MessageForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <label htmlFor="message" className="block mb-2 font-medium">
+            <motion.label htmlFor="message" className="block mb-2 font-medium">
               Message
-            </label>
-            <textarea
+            </motion.label>
+            <motion.textarea
               name="message"
               id="message"
               rows="4"
@@ -180,6 +229,14 @@ const MessageForm = () => {
               placeholder="Enter Your Message"
               onChange={handleChange}
               required
+              whileFocus={{
+                scale: 1.01,
+                y: -1,
+              }}
+              whileHover={{
+                borderColor: "rgba(0, 212, 255, 0.8)",
+              }}
+              transition={{ duration: 0.2 }}
             />
           </motion.div>
 

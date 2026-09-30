@@ -3,6 +3,7 @@ import ScrollReveal from "../common/ScrollReveal";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Projects = () => {
   const { projects } = UsePortfolio();
 
@@ -24,59 +25,119 @@ const Projects = () => {
             return (
               // project card
               <ScrollReveal key={project.id} delay={(index % 3) * 0.12}>
-                <div
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.4 }}
                   key={project.id}
                   className="h-full overflow-hidden flex flex-col bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
                 >
-                  <div className="w-full overflow-hidden">
-                    <img
+                  <motion.div
+                    className="w-full overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.5 }}
                       src={project.image}
                       alt={`${project.title} project preview`}
                       className="object-cover rounded-t-md  transition-transform duration-500 hover:scale-105"
                     />
-                  </div>
+                  </motion.div>
 
                   {/* project information  */}
                   <div className="border-b border-card-border px-4 py-2">
-                    <h2 className="text-text-main text-xl md:text-2xl font-bold  mb-2">
+                    <motion.h2
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="text-text-main text-xl md:text-2xl font-bold  mb-2"
+                    >
                       {project.title}
-                    </h2>
-                    <p className="text-sm md:text-[15px] leading-relaxed italic mb-2 text-text-body">
+                    </motion.h2>
+
+                    {/* project description  */}
+                    <motion.p
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                      className="text-sm md:text-[15px] leading-relaxed italic mb-2 text-text-body"
+                    >
                       {project.description}
-                    </p>
-                    <ul className="list-disc pl-3 md:pl-4 space-y-1 marker:text-accent">
-                      {project.features.map((feature) => {
+                    </motion.p>
+                    {/* project features  */}
+                    <motion.ul
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      className="list-disc pl-3 md:pl-4 space-y-1 marker:text-accent"
+                    >
+                      {project.features.map((feature, featureIndex) => {
                         return (
-                          <li
+                          <motion.li
+                            initial={{ opacity: 0, x: -15 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 0.4,
+                              delay: 0.35 + featureIndex * 0.08,
+                            }}
                             key={feature}
                             className="text-[14px] md:text-[16px]"
                           >
                             {feature}
-                          </li>
+                          </motion.li>
                         );
                       })}
-                    </ul>
+                    </motion.ul>
                   </div>
 
                   <div className="flex flex-col gap-3 px-4 py-3">
                     {/* project technology  */}
-                    <div className="flex flex-wrap gap-2 ">
-                      {project.technologies.map((tech) => {
+                    <motion.div
+                      className="flex flex-wrap gap-2 "
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                      {project.technologies.map((tech, techIndex) => {
                         return (
-                          <span
+                          <motion.span
                             key={tech}
                             className="text-xs bg-badge px-2 py-1 text-accent border border-card-border rounded-md font-semibold hover:bg-badge-hover hover:text-bright-accent hover:border-bright-accent transition duration-500"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 0.3,
+                              delay: 0.45 + techIndex * 0.06,
+                            }}
+                            whileHover={{ scale: 1.05 }}
                           >
                             {tech}
-                          </span>
+                          </motion.span>
                         );
                       })}
-                    </div>
+                    </motion.div>
 
                     {/* project buttons  */}
-                    <div className="flex items-center justify-center gap-4 mt-1">
+                    <motion.div
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className="flex items-center justify-center gap-4 mt-1"
+                    >
                       {/* live demo  */}
-                      <a
+                      <motion.a
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.97 }}
                         href={project.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -84,10 +145,15 @@ const Projects = () => {
                       >
                         Live Demo{" "}
                         <FaArrowUpRightFromSquare className="text-sm" />
-                      </a>
+                      </motion.a>
 
                       {/* github repo  */}
-                      <a
+                      <motion.a
+                        whileHover={{
+                          scale: 1.1,
+                          rotate: 5,
+                        }}
+                        whileTap={{ scale: 0.9 }}
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -95,10 +161,10 @@ const Projects = () => {
                         className="text-2xl border border-card-border p-3 rounded-full hover:text-accent  hover:border-card-hover transition duration-500"
                       >
                         <FaGithub />
-                      </a>
-                    </div>
+                      </motion.a>
+                    </motion.div>
                   </div>
-                </div>
+                </motion.div>
               </ScrollReveal>
             );
           })}

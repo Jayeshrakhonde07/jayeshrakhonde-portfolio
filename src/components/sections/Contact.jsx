@@ -2,7 +2,7 @@ import SectionTitle from "../common/SectionTitle";
 import ScrollReveal from "../common/ScrollReveal";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import MessageForm from "../layout/MessageForm";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   const { contact } = UsePortfolio();
   return (
@@ -21,12 +21,30 @@ const Contact = () => {
           <ScrollReveal direction="left">
             <div className="max-w-xl">
               <div className="text-center mt-2 md:text-start  ">
-                <h3 className="text-2xl text-text-main md:text-3xl font-bold text-shadow-glow">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="text-2xl text-text-main md:text-3xl font-bold text-shadow-glow font-heading"
+                >
                   {contact.heading}
-                </h3>
-                <p className="text-text-body mt-2 text-justify md:text-start">
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.15,
+                  }}
+                  className="text-text-body mt-2 text-justify md:text-start"
+                >
                   {contact.description}
-                </p>
+                </motion.p>
               </div>
 
               <div className="flex flex-col gap-4 mt-4">
@@ -34,21 +52,59 @@ const Contact = () => {
                   const Icons = link.icon;
                   return (
                     <ScrollReveal key={link.id} delay={index * 0.1}>
-                      <a
+                      <motion.a
+                        initial={{
+                          opacity: 0,
+                          x: -25,
+                        }}
+                        whileInView={{
+                          opacity: 1,
+                          x: 0,
+                        }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.5,
+                          delay: index * 0.1,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                        whileHover={{
+                          x: 6,
+                          y: -4,
+                        }}
+                        whileTap={{ scale: 0.98 }}
                         key={link.id}
                         href={link.href}
+                        target="_blank"
                         className="group bg-bg-card border border-card-border flex items-center px-3 py-2 gap-3 rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                       >
-                        <div className="bg-badge p-3 rounded-full border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-500">
+                        <motion.div
+                          whileHover={{
+                            scale: 1.1,
+                            rotate: 5,
+                          }}
+                          transition={{ duration: 0.3 }}
+                          className="bg-badge p-3 rounded-full border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-500"
+                        >
                           <Icons className="text-xl" />
-                        </div>
-                        <div>
+                        </motion.div>
+                        <motion.div
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{
+                            opacity: 1,
+                            x: 0,
+                          }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 0.4,
+                            delay: 0.15 + index * 0.1,
+                          }}
+                        >
                           <p className="font-bold">{link.label}</p>
                           <p className="text-accent font-medium">
                             {link.title}
                           </p>
-                        </div>
-                      </a>
+                        </motion.div>
+                      </motion.a>
                     </ScrollReveal>
                   );
                 })}

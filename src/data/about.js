@@ -17,9 +17,9 @@ const about = {
   ],
 
   services: [
-    { number: "8+", feature: "Technologies" },
-    { number: "6+", feature: "Projects" },
-    { number: "5+", feature: "Certifications" },
+    { number: "9+", feature: "Technologies" },
+    { number: "3+", feature: "Projects" },
+    { number: "7+", feature: "Certifications" },
     { number: "2+", feature: "Experience" },
   ],
 };

@@ -73,7 +73,7 @@ const Hero = () => {
             </p>
 
             {/* hero buttons  */}
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6">
+            <div className="flex flex-col lg:flex-row justify-center md:justify-start gap-4 mt-6">
               <motion.a
                 href="#projects"
                 whileHover={{ scale: 1.03 }}

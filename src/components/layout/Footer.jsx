@@ -13,10 +13,26 @@ const Footer = () => {
         }}
         className="text-center"
       >
-        <h2 className="text-xs sm:text-base font-bold text-text-main">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileHover={{ scale: 1.03 }}
+          className="text-xs sm:text-base font-bold text-text-main"
+        >
           © 2026 Jayesh Rakhonde.{" "}
-          <span className="text-accent">All rights reserved.</span>
-        </h2>
+          <motion.span
+            initial={{ opacity: 0, x: 10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            whileHover={{ textShadow: "0 0 12px rgba(34, 211, 238, 0.8)" }}
+            className="text-accent"
+          >
+            All rights reserved.
+          </motion.span>
+        </motion.h2>
       </motion.div>
     </footer>
   );
