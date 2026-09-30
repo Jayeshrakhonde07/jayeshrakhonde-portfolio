@@ -21,7 +21,7 @@ const Footer = () => {
           whileHover={{ scale: 1.03 }}
           className="text-xs sm:text-base font-bold text-text-main"
         >
-          © 2026 Jayesh Rakhonde.{" "}
+          © {new Date().getFullYear()} Jayesh Rakhonde.{" "}
           <motion.span
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}

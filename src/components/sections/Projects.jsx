@@ -26,9 +26,7 @@ const Projects = () => {
               // project card
               <ScrollReveal key={project.id} delay={(index % 3) * 0.12}>
                 <motion.div
-                  whileHover={{ y: -8 }}
                   transition={{ duration: 0.4 }}
-                  key={project.id}
                   className="h-full overflow-hidden flex flex-col bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
                 >
                   <motion.div
@@ -40,10 +38,10 @@ const Projects = () => {
                   >
                     <motion.img
                       whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.8 }}
                       src={project.image}
                       alt={`${project.title} project preview`}
-                      className="object-cover rounded-t-md  transition-transform duration-500 hover:scale-105"
+                      className="object-cover rounded-t-md  "
                     />
                   </motion.div>
 

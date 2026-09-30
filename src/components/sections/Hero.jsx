@@ -55,6 +55,7 @@ const Hero = () => {
             }}
             className="text-center md:text-left"
           >
+            {/* personal information  */}
             <p className="text-text-muted">Hello, I am</p>
             <h1 className="text-text-main text-3xl md:text-4xl lg:text-6xl font-heading font-bold mb-2 text-shadow-glow">
               {hero.personal.name}

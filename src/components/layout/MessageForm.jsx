@@ -223,6 +223,7 @@ const MessageForm = () => {
               name="message"
               id="message"
               rows="4"
+              maxLength={2000}
               autoComplete="off"
               value={form.message}
               className="w-full px-3 py-2 border border-card-border bg-bg-secondary rounded-md placeholder:text-text-muted focus:border-accent focus:outline-none"

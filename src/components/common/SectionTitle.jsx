@@ -18,9 +18,9 @@ const SectionTitle = ({ title, subtitle, spantitle }) => {
       <h1 className="text-3xl md:text-4xl font-heading font-bold text-text-main text-shadow-glow">
         {title}
       </h1>
-      <h1 className="text-xl md:text-2xl font-title font-bold mt-2">
+      <p className="text-xl md:text-2xl font-title font-bold mt-2">
         {subtitle} <span className="text-accent">{spantitle}</span>
-      </h1>
+      </p>
       <motion.div
         initial={{ width: 0, opacity: 0 }}
         whileInView={{ width: "5rem", opacity: 1 }}

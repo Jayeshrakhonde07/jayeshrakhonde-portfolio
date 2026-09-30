@@ -24,7 +24,6 @@ const Certifications = () => {
             return (
               <ScrollReveal key={certificate.id} delay={(index % 3) * 0.12}>
                 <motion.div
-                  key={certificate.id}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -33,7 +32,6 @@ const Certifications = () => {
                     delay: (index % 3) * 0.12,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  whileHover={{ y: -8 }}
                   className="bg-bg-card border border-card-border overflow-hidden rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
                 >
                   {/*certificates image*/}
@@ -45,7 +43,7 @@ const Certifications = () => {
                       duration: 0.6,
                       delay: 0.1,
                     }}
-                    className="w-full h-52 md:h-56 overflow-hidden rounded-t-xl "
+                    className="w-full h-52 md:h-56 overflow-hidden rounded-t-xl"
                   >
                     <motion.img
                       src={certificate.image}
@@ -53,6 +51,7 @@ const Certifications = () => {
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.5 }}
                       className="w-full object-contain "
+                      loading="lazy"
                     />
                   </motion.div>
 

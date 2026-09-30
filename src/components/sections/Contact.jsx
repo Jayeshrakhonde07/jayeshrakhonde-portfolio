@@ -67,14 +67,10 @@ const Contact = () => {
                           delay: index * 0.1,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        whileHover={{
-                          x: 6,
-                          y: -4,
-                        }}
                         whileTap={{ scale: 0.98 }}
-                        key={link.id}
                         href={link.href}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="group bg-bg-card border border-card-border flex items-center px-3 py-2 gap-3 rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                       >
                         <motion.div
@@ -85,7 +81,7 @@ const Contact = () => {
                           transition={{ duration: 0.3 }}
                           className="bg-badge p-3 rounded-full border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-500"
                         >
-                          <Icons className="text-xl" />
+                          <Icons className="text-xl" aria-hidden="true" />
                         </motion.div>
                         <motion.div
                           initial={{ opacity: 0, x: -10 }}

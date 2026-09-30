@@ -10,7 +10,7 @@ const Skills = () => {
       className="min-h-screen flex items-center px-6 md:px-8 lg:px-10 py-20"
       id="skills"
     >
-      <div className="max-w-7xl mx-auto w-full ">
+      <div className="max-w-7xl mx-auto w-full">
         <SectionTitle
           title={"Technical Skills"}
           subtitle={"Technologies I "}
@@ -23,7 +23,6 @@ const Skills = () => {
             return (
               <ScrollReveal key={skill.id} delay={(index % 6) * 0.08}>
                 <motion.div
-                  key={skill.id}
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -32,10 +31,7 @@ const Skills = () => {
                     delay: (index % 6) * 0.08,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  whileHover={{
-                    y: -6,
-                    scale: 1.02,
-                  }}
+                  
                   className="group relative bg-bg-card border border-card-border min-h-40 px-4 py-5 flex flex-col items-center justify-center text-center rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                 >
                   <motion.span
@@ -77,6 +73,7 @@ const Skills = () => {
                   </motion.div>
 
                   <motion.h2
+                  
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{

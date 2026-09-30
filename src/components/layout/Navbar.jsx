@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
@@ -23,9 +23,11 @@ const Navbar = () => {
         duration: 0.7,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="w-full fixed top-0  max-w-[100vw] px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu"
+      className="w-full fixed top-0 px-6 md:px-8 lg:px-12 bg-bg-page/90 backdrop-blur-md  z-50 shadow-desktop-menu"
     >
+      {/* navbar  */}
       <nav className="max-w-7xl  mx-auto  h-16   min-w-0  flex items-center justify-between">
+        {/* JR Logo  */}
         <motion.a
           href="#home"
           onClick={() => setMenu(false)}
@@ -46,7 +48,7 @@ const Navbar = () => {
           JR
         </motion.a>
 
-        {/* desktop menu  */}
+        {/* desktop menu links  */}
         <div className="hidden md:flex items-center gap-8">
           {navigations.map((link, index) => {
             return (
@@ -71,6 +73,7 @@ const Navbar = () => {
             );
           })}
 
+          {/* let's talk button  */}
           <motion.a
             href="#contact"
             initial={{ opacity: 0, x: 20, scale: 0.9 }}
@@ -104,7 +107,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.9, rotate: 5 }}
           onClick={() => setMenu(!menu)}
-          aria-label={menu ? "Close navigation menu" : "Open navigation menu"}
+          aria-controls="mobile-navigation"
           aria-expanded={menu}
           className="md:hidden flex text-2xl text-accent border border-card-border p-2.5 rounded-full active:text-bright-accent font-bold transition duration-500 "
         >
@@ -120,30 +123,19 @@ const Navbar = () => {
         </motion.button>
       </nav>
 
-      {/* mobile menu  */}
+      {/* mobile menu links  */}
 
       {menu && (
         <motion.div
-          initial={{
-            opacity: 0,
-            y: -15,
-            height: 0,
-          }}
+          initial={false}
           animate={{
-            opacity: 1,
-            y: 0,
-            height: "auto",
+            opacity: menu ? 1 : 0,
+            height: menu ? "auto" : 0,
+            y: menu ? 0 : -10,
           }}
-          exit={{
-            opacity: 0,
-            y: -15,
-            height: 0,
-          }}
-          transition={{
-            duration: 0.35,
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="md:hidden absolute left-0 top-full w-full bg-bg-page/98 backdrop-blur-md border-b border-card-border py-4 overflow-hidden shadow-mobile-menu"
+          style={{ pointerEvents: menu ? "auto" : "none" }}
         >
           <div className="flex flex-col items-center gap-5">
             {navigations.map((link, index) => {
@@ -183,6 +175,7 @@ const Navbar = () => {
               );
             })}
 
+            {/* mobile talk button  */}
             <motion.a
               href="#contact"
               onClick={() => setMenu(false)}

@@ -22,7 +22,6 @@ const About = () => {
           <ScrollReveal direction="left">
             {/*information about me */}
             <motion.div
-              whileHover={{ y: -5 }}
               transition={{ duration: 0.4 }}
               className="bg-bg-card/70 border border-card-border p-4 md:p-6 rounded-md backdrop-blur-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
             >
@@ -35,6 +34,8 @@ const About = () => {
               >
                 Building ideas into meaningful digital experiences
               </motion.h2>
+
+              {/* paragraph no.1  */}
               <motion.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +66,7 @@ const About = () => {
                 technologies and turning my ideas into something that people can
                 actually use.
               </motion.p>
-
+              {/* paragraph no.2  */}
               <motion.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +87,7 @@ const About = () => {
                 because I want to understand how a complete web application
                 works, not just the part users see.
               </motion.p>
-
+              {/* paragraph no.3 */}
               <motion.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +120,7 @@ const About = () => {
                   const Icon = info.icon;
                   return (
                     <ScrollReveal key={info.label} delay={index * 0.1}>
-                      <motion.div
+                      <div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -127,17 +128,16 @@ const About = () => {
                           duration: 0.5,
                           delay: index * 0.1,
                         }}
-                        whileHover={{ x: 5, y: -4 }}
-                        key={info.label}
                         className="group bg-bg-card flex items-center gap-3 px-3 py-2 border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                       >
+                        {/* info icon  */}
                         <motion.div
                           whileHover={{
                             scale: 1.1,
                             rotate: 5,
                           }}
                           transition={{ duration: 0.3 }}
-                          className="bg-badge p-3 rounded-md border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover   transition duration-300"
+                          className="bg-badge p-3 rounded-md border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-300"
                         >
                           <Icon aria-hidden="true" />
                         </motion.div>
@@ -150,6 +150,7 @@ const About = () => {
                             delay: 0.15 + index * 0.1,
                           }}
                         >
+                          {/* info data  */}
                           <h3 className="text-accent font-medium">
                             {info.label}
                           </h3>
@@ -157,7 +158,7 @@ const About = () => {
                             {info.title}
                           </p>
                         </motion.div>
-                      </motion.div>
+                      </div>
                     </ScrollReveal>
                   );
                 })}
@@ -184,13 +185,9 @@ const About = () => {
                           duration: 0.5,
                           delay: index * 0.1,
                         }}
-                        whileHover={{
-                          y: -5,
-                          scale: 1.03,
-                        }}
-                        key={service.feature}
                         className="bg-bg-card border border-card-border rounded-md p-2 text-center hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                       >
+                        {/* card number  */}
                         <motion.span
                           initial={{ opacity: 0, scale: 0.5 }}
                           whileInView={{
