@@ -12,14 +12,14 @@ const contact = {
       icon: MdOutlineMailOutline,
       label: "Email",
       title: "jayeshrakhonde05@gmail.com",
-      href: "",
+      href: "mailto:jayeshrakhonde05@gmail.com",
     },
     {
       id: 2,
       icon: FaPhoneAlt,
       label: "Phone",
       title: "+91 7498610902",
-      href: "",
+      href: "tel:+917498610902",
     },
     {
       id: 3,

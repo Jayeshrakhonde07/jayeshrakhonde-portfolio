@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { FaPaperPlane } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const MessageForm = () => {
+  // form data
   const [form, setForm] = useState({
     user_name: "",
     user_email: "",
@@ -21,6 +22,7 @@ const MessageForm = () => {
     });
   };
 
+  // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
@@ -72,14 +74,14 @@ const MessageForm = () => {
 
   return (
     <>
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
       >
-        <motion.div
+        <m.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -90,17 +92,18 @@ const MessageForm = () => {
             Send a <span className="text-accent">Message</span>
           </h3>
           <p className="text-text-body">I'll get back to you within 24 hours</p>
-        </motion.div>
+        </m.div>
 
         <form className="flex flex-col gap-4 p-4" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <motion.div
+            {/* name input  */}
+            <m.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.1 }}
             >
-              <motion.label
+              <m.label
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -109,8 +112,8 @@ const MessageForm = () => {
                 className="block mb-2 font-medium"
               >
                 Name
-              </motion.label>
-              <motion.input
+              </m.label>
+              <m.input
                 name="user_name"
                 type="text"
                 id="name"
@@ -129,15 +132,15 @@ const MessageForm = () => {
                 }}
                 transition={{ duration: 0.2 }}
               />
-            </motion.div>
-
-            <motion.div
+            </m.div>
+            {/* email input  */}
+            <m.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.2 }}
             >
-              <motion.label
+              <m.label
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -149,8 +152,8 @@ const MessageForm = () => {
                 className="block mb-2 font-medium"
               >
                 Email
-              </motion.label>
-              <motion.input
+              </m.label>
+              <m.input
                 name="user_email"
                 type="email"
                 id="email"
@@ -169,16 +172,16 @@ const MessageForm = () => {
                 }}
                 transition={{ duration: 0.2 }}
               />
-            </motion.div>
+            </m.div>
           </div>
-
-          <motion.div
+          {/* subject input  */}
+          <m.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.3 }}
           >
-            <motion.label
+            <m.label
               viewport={{ once: true }}
               transition={{
                 duration: 0.5,
@@ -188,8 +191,8 @@ const MessageForm = () => {
               className="block mb-2 font-medium"
             >
               Subject
-            </motion.label>
-            <motion.input
+            </m.label>
+            <m.input
               name="subject"
               type="text"
               id="subject"
@@ -208,18 +211,18 @@ const MessageForm = () => {
               }}
               transition={{ duration: 0.2 }}
             />
-          </motion.div>
-
-          <motion.div
+          </m.div>
+          {/* message input  */}
+          <m.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <motion.label htmlFor="message" className="block mb-2 font-medium">
+            <m.label htmlFor="message" className="block mb-2 font-medium">
               Message
-            </motion.label>
-            <motion.textarea
+            </m.label>
+            <m.textarea
               name="message"
               id="message"
               rows="4"
@@ -239,9 +242,10 @@ const MessageForm = () => {
               }}
               transition={{ duration: 0.2 }}
             />
-          </motion.div>
+          </m.div>
 
-          <motion.button
+          {/* submit button  */}
+          <m.button
             type="submit"
             disabled={isSending}
             whileHover={!isSending ? { scale: 1.02 } : {}}
@@ -252,10 +256,11 @@ const MessageForm = () => {
           >
             <FaPaperPlane />
             {isSending ? "Sending..." : "Send a Message"}
-          </motion.button>
+          </m.button>
         </form>
-      </motion.div>
+      </m.div>
 
+      {/* submit toast message  */}
       <ToastContainer
         position="top-right"
         autoClose={3000}

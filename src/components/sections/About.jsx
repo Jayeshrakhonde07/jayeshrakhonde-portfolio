@@ -1,7 +1,7 @@
 import SectionTitle from "../common/SectionTitle";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import ScrollReveal from "../common/ScrollReveal";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 const About = () => {
   const { about } = UsePortfolio();
 
@@ -18,14 +18,14 @@ const About = () => {
           spantitle={"Know Me"}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <div className="grid grid-cols-1  lg:grid-cols-2 gap-6 mt-4">
           <ScrollReveal direction="left">
             {/*information about me */}
-            <motion.div
+            <m.div
               transition={{ duration: 0.4 }}
               className="bg-bg-card/70 border border-card-border p-4 md:p-6 rounded-md backdrop-blur-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
             >
-              <motion.h2
+              <m.h2
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -33,10 +33,10 @@ const About = () => {
                 className="font-bold mb-2 md:text-xl "
               >
                 Building ideas into meaningful digital experiences
-              </motion.h2>
+              </m.h2>
 
               {/* paragraph no.1  */}
-              <motion.p
+              <m.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -44,19 +44,19 @@ const About = () => {
                 className="text-text-body text-justify [hyphens:auto]  mb-4"
               >
                 Hello! I’m{" "}
-                <motion.span
+                <m.span
                   whileHover={{ color: "#67e8f9" }}
                   className="text-text-main font-medium"
                 >
                   Jayesh Kishor Rakhonde
-                </motion.span>
+                </m.span>
                 , an Information Technology student pursuing my{" "}
-                <motion.span
+                <m.span
                   whileHover={{ scale: 1.02 }}
                   className="text-accent font-medium"
                 >
                   B.Tech in Information Technology
-                </motion.span>{" "}
+                </m.span>{" "}
                 at{" "}
                 <span className="text-text-main font-medium">
                   Prof. Ram Meghe Institute of Technology and Research, Badnera.
@@ -65,9 +65,9 @@ const About = () => {
                 about how websites and applications work. I enjoy learning new
                 technologies and turning my ideas into something that people can
                 actually use.
-              </motion.p>
+              </m.p>
               {/* paragraph no.2  */}
-              <motion.p
+              <m.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -86,9 +86,9 @@ const About = () => {
                 </span>{" "}
                 because I want to understand how a complete web application
                 works, not just the part users see.
-              </motion.p>
+              </m.p>
               {/* paragraph no.3 */}
-              <motion.p
+              <m.p
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -107,8 +107,8 @@ const About = () => {
                   Frontend Developer
                 </span>
                 .
-              </motion.p>
-            </motion.div>
+              </m.p>
+            </m.div>
           </ScrollReveal>
 
           {/* right content  */}
@@ -120,7 +120,7 @@ const About = () => {
                   const Icon = info.icon;
                   return (
                     <ScrollReveal key={info.label} delay={index * 0.1}>
-                      <div
+                      <m.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -131,7 +131,7 @@ const About = () => {
                         className="group bg-bg-card flex items-center gap-3 px-3 py-2 border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                       >
                         {/* info icon  */}
-                        <motion.div
+                        <m.div
                           whileHover={{
                             scale: 1.1,
                             rotate: 5,
@@ -140,8 +140,9 @@ const About = () => {
                           className="bg-badge p-3 rounded-md border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-300"
                         >
                           <Icon aria-hidden="true" />
-                        </motion.div>
-                        <motion.div
+                        </m.div>
+                        {/* info data  */}
+                        <m.div
                           initial={{ opacity: 0, x: 10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
@@ -150,26 +151,25 @@ const About = () => {
                             delay: 0.15 + index * 0.1,
                           }}
                         >
-                          {/* info data  */}
                           <h3 className="text-accent font-medium">
                             {info.label}
                           </h3>
                           <p className="text-text-main font-medium">
                             {info.title}
                           </p>
-                        </motion.div>
-                      </div>
+                        </m.div>
+                      </m.div>
                     </ScrollReveal>
                   );
                 })}
               </div>
 
               {/* services cards  */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2  gap-4">
                 {about.services.map((service, index) => {
                   return (
                     <ScrollReveal key={service.feature} delay={index * 0.1}>
-                      <motion.div
+                      <m.div
                         initial={{
                           opacity: 0,
                           y: 25,
@@ -188,7 +188,7 @@ const About = () => {
                         className="bg-bg-card border border-card-border rounded-md p-2 text-center hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                       >
                         {/* card number  */}
-                        <motion.span
+                        <m.span
                           initial={{ opacity: 0, scale: 0.5 }}
                           whileInView={{
                             opacity: 1,
@@ -196,7 +196,6 @@ const About = () => {
                           }}
                           viewport={{ once: true }}
                           transition={{
-                            duration: 0.5,
                             delay: 0.2 + index * 0.1,
                             type: "spring",
                             stiffness: 150,
@@ -204,8 +203,8 @@ const About = () => {
                           className="text-3xl font-medium text-accent"
                         >
                           {service.number}
-                        </motion.span>
-                        <motion.p
+                        </m.span>
+                        <m.p
                           initial={{ opacity: 0, y: 8 }}
                           whileInView={{
                             opacity: 1,
@@ -219,8 +218,8 @@ const About = () => {
                           className="text-text-body"
                         >
                           {service.feature}
-                        </motion.p>
-                      </motion.div>
+                        </m.p>
+                      </m.div>
                     </ScrollReveal>
                   );
                 })}

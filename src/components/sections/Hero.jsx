@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import UsePortfolio from "../../hooks/UsePortfolio";
@@ -45,7 +45,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* left content  */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
@@ -75,7 +75,7 @@ const Hero = () => {
 
             {/* hero buttons  */}
             <div className="flex flex-col lg:flex-row justify-center md:justify-start gap-4 mt-6">
-              <motion.a
+              <m.a
                 href="#projects"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -83,8 +83,8 @@ const Hero = () => {
               >
                 View Projects
                 <FaArrowRight className="group-hover:translate-x-1 transition duration-500" />{" "}
-              </motion.a>
-              <motion.a
+              </m.a>
+              <m.a
                 href={hero.personal.resume}
                 download="Jayesh_Rakhonde_Resume.pdf"
                 whileHover={{ scale: 1.03 }}
@@ -93,7 +93,7 @@ const Hero = () => {
               >
                 Download Resume
                 <FiDownload className="group-hover:translate-y-1 transition duration-500" />
-              </motion.a>
+              </m.a>
             </div>
 
             {/* social links  */}
@@ -101,7 +101,7 @@ const Hero = () => {
               {hero.socialLinks.map((link) => {
                 const Icons = link.icon;
                 return (
-                  <motion.a
+                  <m.a
                     key={link.label}
                     href={link.href}
                     rel="noopener noreferrer"
@@ -115,14 +115,14 @@ const Hero = () => {
                     className="bg-bg-card p-2 text-2xl text-accent border border-card-border rounded-full hover:text-text-main hover:bg-accent hover:border-card-hover hover:shadow-button  transition duration-500"
                   >
                     <Icons />
-                  </motion.a>
+                  </m.a>
                 );
               })}
             </div>
-          </motion.div>
+          </m.div>
 
           {/* profile images with particles */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 60, scale: 0.85 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{
@@ -155,7 +155,7 @@ const Hero = () => {
               ))}
 
               {/* profile image */}
-              <motion.div
+              <m.div
                 animate={{
                   y: [0, -10, 0],
                 }}
@@ -175,9 +175,9 @@ const Hero = () => {
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

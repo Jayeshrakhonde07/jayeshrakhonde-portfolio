@@ -3,7 +3,7 @@ import ScrollReveal from "../common/ScrollReveal";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 const Projects = () => {
   const { projects } = UsePortfolio();
 
@@ -25,40 +25,41 @@ const Projects = () => {
             return (
               // project card
               <ScrollReveal key={project.id} delay={(index % 3) * 0.12}>
-                <motion.div
+                <m.div
                   transition={{ duration: 0.4 }}
-                  className="h-full overflow-hidden flex flex-col bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
+                  className="h-full overflow-hidden flex flex-col bg-bg-card border border-card-border rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
                 >
-                  <motion.div
-                    className="w-full overflow-hidden"
+                  {/* project image  */}
+                  <m.div
+                    className="w-full flex items-center justify-center overflow-hidden rounded-t-xl"
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <motion.img
+                    <m.img
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.8 }}
                       src={project.image}
                       alt={`${project.title} project preview`}
-                      className="object-cover rounded-t-md  "
+                      className="w-full object-cover  rounded-t-xl  "
                     />
-                  </motion.div>
+                  </m.div>
 
                   {/* project information  */}
                   <div className="border-b border-card-border px-4 py-2">
-                    <motion.h2
+                    <m.h2
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
                       transition={{ duration: 0.5, delay: 0.1 }}
-                      className="text-text-main text-xl md:text-2xl font-bold  mb-2"
+                      className="text-text-main text-xl md:text-2xl font-bold  mb-1"
                     >
                       {project.title}
-                    </motion.h2>
+                    </m.h2>
 
                     {/* project description  */}
-                    <motion.p
+                    <m.p
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
@@ -66,9 +67,9 @@ const Projects = () => {
                       className="text-sm md:text-[15px] leading-relaxed italic mb-2 text-text-body"
                     >
                       {project.description}
-                    </motion.p>
+                    </m.p>
                     {/* project features  */}
-                    <motion.ul
+                    <m.ul
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
@@ -77,7 +78,7 @@ const Projects = () => {
                     >
                       {project.features.map((feature, featureIndex) => {
                         return (
-                          <motion.li
+                          <m.li
                             initial={{ opacity: 0, x: -15 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -89,15 +90,15 @@ const Projects = () => {
                             className="text-[14px] md:text-[16px]"
                           >
                             {feature}
-                          </motion.li>
+                          </m.li>
                         );
                       })}
-                    </motion.ul>
+                    </m.ul>
                   </div>
 
                   <div className="flex flex-col gap-3 px-4 py-3">
                     {/* project technology  */}
-                    <motion.div
+                    <m.div
                       className="flex flex-wrap gap-2 "
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +107,7 @@ const Projects = () => {
                     >
                       {project.technologies.map((tech, techIndex) => {
                         return (
-                          <motion.span
+                          <m.span
                             key={tech}
                             className="text-xs bg-badge px-2 py-1 text-accent border border-card-border rounded-md font-semibold hover:bg-badge-hover hover:text-bright-accent hover:border-bright-accent transition duration-500"
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -119,13 +120,13 @@ const Projects = () => {
                             whileHover={{ scale: 1.05 }}
                           >
                             {tech}
-                          </motion.span>
+                          </m.span>
                         );
                       })}
-                    </motion.div>
+                    </m.div>
 
                     {/* project buttons  */}
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
@@ -133,7 +134,7 @@ const Projects = () => {
                       className="flex items-center justify-center gap-4 mt-1"
                     >
                       {/* live demo  */}
-                      <motion.a
+                      <m.a
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
                         href={project.liveDemo}
@@ -143,10 +144,10 @@ const Projects = () => {
                       >
                         Live Demo{" "}
                         <FaArrowUpRightFromSquare className="text-sm" />
-                      </motion.a>
+                      </m.a>
 
                       {/* github repo  */}
-                      <motion.a
+                      <m.a
                         whileHover={{
                           scale: 1.1,
                           rotate: 5,
@@ -159,10 +160,10 @@ const Projects = () => {
                         className="text-2xl border border-card-border p-3 rounded-full hover:text-accent  hover:border-card-hover transition duration-500"
                       >
                         <FaGithub />
-                      </motion.a>
-                    </motion.div>
+                      </m.a>
+                    </m.div>
                   </div>
-                </motion.div>
+                </m.div>
               </ScrollReveal>
             );
           })}

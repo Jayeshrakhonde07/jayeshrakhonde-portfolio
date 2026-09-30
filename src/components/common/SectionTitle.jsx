@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const SectionTitle = ({ title, subtitle, spantitle }) => {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 35 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{
@@ -15,18 +15,17 @@ const SectionTitle = ({ title, subtitle, spantitle }) => {
       }}
       className="text-center mb-4"
     >
-      <h1 className="text-3xl md:text-4xl font-heading font-bold text-text-main text-shadow-glow">
+      <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-main text-shadow-glow">
         {title}
-      </h1>
+      </h2>
       <p className="text-xl md:text-2xl font-title font-bold mt-2">
         {subtitle} <span className="text-accent">{spantitle}</span>
       </p>
-      <motion.div
-        initial={{ width: 0, opacity: 0 }}
-        whileInView={{ width: "5rem", opacity: 1 }}
+      <m.div
+        initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
         viewport={{
           once: true,
-          amount: 0.5,
         }}
         transition={{
           delay: 0.2,
@@ -34,8 +33,8 @@ const SectionTitle = ({ title, subtitle, spantitle }) => {
           ease: "easeOut",
         }}
         className="w-20 h-1 bg-accent mx-auto mt-4"
-      ></motion.div>
-    </motion.div>
+      ></m.div>
+    </m.div>
   );
 };
 

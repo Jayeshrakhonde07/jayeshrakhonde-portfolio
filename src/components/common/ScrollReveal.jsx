@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import { m,useReducedMotion } from "framer-motion";
 
 const ScrollReveal = ({
+
   children,
   direction = "up",
   delay = 0,
@@ -15,7 +16,7 @@ const ScrollReveal = ({
   };
 
   return (
-    <motion.div
+    <m.div
       initial={{
         opacity: 0,
         ...directions[direction],
@@ -37,7 +38,7 @@ const ScrollReveal = ({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 };
 

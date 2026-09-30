@@ -2,7 +2,7 @@ import SectionTitle from "../common/SectionTitle";
 import ScrollReveal from "../common/ScrollReveal";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 const Certifications = () => {
   const { certifications } = UsePortfolio();
   return (
@@ -23,7 +23,7 @@ const Certifications = () => {
           {certifications.map((certificate, index) => {
             return (
               <ScrollReveal key={certificate.id} delay={(index % 3) * 0.12}>
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -35,7 +35,7 @@ const Certifications = () => {
                   className="bg-bg-card border border-card-border overflow-hidden rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
                 >
                   {/*certificates image*/}
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
@@ -43,21 +43,22 @@ const Certifications = () => {
                       duration: 0.6,
                       delay: 0.1,
                     }}
-                    className="w-full h-52 md:h-56 overflow-hidden rounded-t-xl"
+                    className="w-full md:h-58 overflow-hidden rounded-t-xl"
                   >
-                    <motion.img
+                    <m.img
                       src={certificate.image}
                       alt={`${certificate.title} certificate`}
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.5 }}
-                      className="w-full object-contain "
+                      className="w-full object-cover rounded-t-2xl"
                       loading="lazy"
                     />
-                  </motion.div>
+                  </m.div>
 
                   {/*certificates information*/}
                   <div className="p-4 md:p-6 flex flex-col">
-                    <motion.h2
+                    {/*title*/}
+                    <m.h2
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -68,8 +69,9 @@ const Certifications = () => {
                       className="text-text-main text-lg md:text-xl font-semibold"
                     >
                       {certificate.title}
-                    </motion.h2>
-                    <motion.p
+                    </m.h2>
+                    {/*issuer*/}
+                    <m.p
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -80,8 +82,9 @@ const Certifications = () => {
                       className="text-accent mt-1 font-bold text-[18px]"
                     >
                       {certificate.issuer}
-                    </motion.p>
-                    <motion.p
+                    </m.p>
+                    {/*issued date*/}
+                    <m.p
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -93,8 +96,9 @@ const Certifications = () => {
                     >
                       <span className="text-accent">Issued: </span>
                       {certificate.date}
-                    </motion.p>
-                    <motion.p
+                    </m.p>
+                    {/*description*/}
+                    <m.p
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -105,10 +109,10 @@ const Certifications = () => {
                       className="text-text-body mt-2"
                     >
                       {certificate.description}
-                    </motion.p>
+                    </m.p>
 
                     {/*view button*/}
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, y: 15 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -118,7 +122,7 @@ const Certifications = () => {
                       }}
                       className="mt-3"
                     >
-                      <motion.a
+                      <m.a
                         href={certificate.credentialUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -128,10 +132,10 @@ const Certifications = () => {
                       >
                         View Certificate{" "}
                         <FaArrowRightToBracket className="group-hover:translate-x-1 transition duration-500" />
-                      </motion.a>
-                    </motion.div>
+                      </m.a>
+                    </m.div>
                   </div>
-                </motion.div>
+                </m.div>
               </ScrollReveal>
             );
           })}

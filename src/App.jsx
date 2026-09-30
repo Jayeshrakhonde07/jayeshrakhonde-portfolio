@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 import Loader from "./components/layout/Loader";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
@@ -15,7 +16,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 200000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -26,14 +27,18 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Certifications />
-      <Contact />
-      <Footer />
+      <MotionConfig reducedMotion="user">
+        <LazyMotion features={domAnimation}>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Certifications />
+          <Contact />
+          <Footer />
+        </LazyMotion>
+      </MotionConfig>
     </>
   );
 };

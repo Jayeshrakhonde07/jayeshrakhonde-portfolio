@@ -1,7 +1,7 @@
 import SectionTitle from "../common/SectionTitle";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import ScrollReveal from "../common/ScrollReveal";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 const Skills = () => {
   const { skills } = UsePortfolio();
 
@@ -22,7 +22,7 @@ const Skills = () => {
           {skills.map((skill, index) => {
             return (
               <ScrollReveal key={skill.id} delay={(index % 6) * 0.08}>
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -31,10 +31,10 @@ const Skills = () => {
                     delay: (index % 6) * 0.08,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  
                   className="group relative bg-bg-card border border-card-border min-h-40 px-4 py-5 flex flex-col items-center justify-center text-center rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
                 >
-                  <motion.span
+                  {/* skills category  */}
+                  <m.span
                     initial={{ opacity: 0, scale: 0.7 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -46,9 +46,9 @@ const Skills = () => {
                     className="absolute top-2 right-2 md:top-3 md:right-2 bg-badge text-accent text-[9px] sm:text-[10px] font-medium px-2 py-1 rounded-full border border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent group-hover:border-card-hover transition duration-500"
                   >
                     {skill.category}
-                  </motion.span>
-
-                  <motion.div
+                  </m.span>
+                  {/* skills icon */}
+                  <m.div
                     initial={{ opacity: 0, scale: 0.6, rotate: -10 }}
                     whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                     viewport={{ once: true }}
@@ -59,7 +59,7 @@ const Skills = () => {
                     }}
                     className="w-16 h-16 mt-3"
                   >
-                    <motion.img
+                    <m.img
                       whileHover={{
                         scale: 1.12,
                         rotate: 3,
@@ -70,10 +70,10 @@ const Skills = () => {
                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 "
                       loading="lazy"
                     />
-                  </motion.div>
+                  </m.div>
 
-                  <motion.h2
-                  
+                  {/* skills title  */}
+                  <m.h2
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{
@@ -83,8 +83,8 @@ const Skills = () => {
                     className="text-text-main font-medium mt-2"
                   >
                     {skill.label}
-                  </motion.h2>
-                </motion.div>
+                  </m.h2>
+                </m.div>
               </ScrollReveal>
             );
           })}

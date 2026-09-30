@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const Footer = () => {
   return (
     <footer className="bg-bg-secondary px-6 md:px-8 lg:px-10 py-6 border-t border-card-border">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -13,7 +13,7 @@ const Footer = () => {
         }}
         className="text-center"
       >
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -21,8 +21,8 @@ const Footer = () => {
           whileHover={{ scale: 1.03 }}
           className="text-xs sm:text-base font-bold text-text-main"
         >
-          © {new Date().getFullYear()} Jayesh Rakhonde.{" "}
-          <motion.span
+          © 2026 Jayesh Rakhonde.{" "}
+          <m.span
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -31,9 +31,9 @@ const Footer = () => {
             className="text-accent"
           >
             All rights reserved.
-          </motion.span>
-        </motion.h2>
-      </motion.div>
+          </m.span>
+        </m.h2>
+      </m.div>
     </footer>
   );
 };
