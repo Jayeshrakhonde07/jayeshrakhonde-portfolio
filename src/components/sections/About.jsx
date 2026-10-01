@@ -117,7 +117,7 @@ const About = () => {
           <ScrollReveal direction="right">
             <div className="flex flex-col gap-4">
               {/* card information  */}
-              <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-1">
                 {about.information.map((info, index) => {
                   const Icon = info.icon;
                   return (
@@ -163,7 +163,7 @@ const About = () => {
               </div>
 
               {/* services cards  */}
-              <div className="grid grid-cols-2  gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4">
                 {about.services.map((service, index) => {
                   return (
                     <ScrollReveal key={service.feature} delay={index * 0.1}>
