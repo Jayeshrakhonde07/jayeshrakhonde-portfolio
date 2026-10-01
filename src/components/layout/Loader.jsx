@@ -14,8 +14,8 @@ const Loader = () => {
           </m.h1>
 
           <m.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-xl sm:text-2xl font-semibold text-text-main mb-8"
           >

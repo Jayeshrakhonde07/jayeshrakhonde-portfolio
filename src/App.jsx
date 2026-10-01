@@ -21,9 +21,9 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // if (loading) {
-  //   return <Loader />;
-  // }
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>

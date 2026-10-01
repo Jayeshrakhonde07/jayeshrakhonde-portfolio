@@ -18,8 +18,6 @@ const myskills = [
   { id: 7, icon: clogo, label: "C", category: "Programming" },
   { id: 8, icon: gitlogo, label: "Git", category: "Tools" },
   { id: 9, icon: githublogo, label: "Github", category: "Tools" },
-
-
 ];
 
 export default myskills;

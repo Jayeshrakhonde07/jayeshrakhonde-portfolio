@@ -31,7 +31,7 @@ const Skills = () => {
                     delay: (index % 6) * 0.08,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="group relative bg-bg-card border border-card-border min-h-40 px-4 py-5 flex flex-col items-center justify-center text-center rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
+                  className="group relative bg-bg-card border border-card-border min-h-40 px-4 py-5 flex flex-col items-center justify-center text-center rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1  active:border-card-hover  active:shadow-card active:-translate-y-1  transition duration-500"
                 >
                   {/* skills category  */}
                   <m.span
@@ -43,7 +43,7 @@ const Skills = () => {
                       delay: 0.15 + (index % 6) * 0.08,
                     }}
                     whileHover={{ scale: 1.05 }}
-                    className="absolute top-2 right-2 md:top-3 md:right-2 bg-badge text-accent text-[9px] sm:text-[10px] font-medium px-2 py-1 rounded-full border border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent group-hover:border-card-hover transition duration-500"
+                    className="absolute top-2 right-2 md:top-3 md:right-2 bg-badge text-accent text-[9px] sm:text-[10px] font-medium px-2 py-1 rounded-full border border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent group-hover:border-card-hover  group-active:bg-badge-hover group-active:text-bright-accent group-active:border-card-border   transition duration-500"
                   >
                     {skill.category}
                   </m.span>
@@ -67,7 +67,7 @@ const Skills = () => {
                       transition={{ duration: 0.3 }}
                       src={skill.icon}
                       alt={skill.label}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 "
+                      className="w-full h-full object-contain  group-hover:scale-110 group-active:scale-110  transition-transform duration-500"
                       loading="lazy"
                     />
                   </m.div>

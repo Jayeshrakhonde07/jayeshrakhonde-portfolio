@@ -60,7 +60,10 @@ const Hero = () => {
             <h1 className="text-text-main text-3xl md:text-4xl lg:text-6xl font-heading font-bold mb-2 text-shadow-glow">
               {hero.personal.name}
             </h1>
-            <h2 className="text-accent min-h-12 text-2xl md:text-3xl lg:text-4xl font-medium my-3">
+            <h2
+              aria-live="polite"
+              className="text-accent text-2xl md:text-3xl lg:text-4xl font-medium my-3"
+            >
               {displayText}{" "}
               <span className="animate-pulse" aria-hidden="true">
                 |
@@ -79,17 +82,17 @@ const Hero = () => {
                 href="#projects"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="group bg-accent px-5 py-2.5 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold  hover:shadow-button hover:text-text-main transition duration-500"
+                className="group bg-accent px-5 py-2.5 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold  hover:shadow-button hover:text-text-main active:shadow-button active:text-text-main transition duration-500 "
               >
                 View Projects
-                <FaArrowRight className="group-hover:translate-x-1 transition duration-500" />{" "}
+                <FaArrowRight className="group-hover:translate-x-1 group-active:translate-x-2 transition duration-500" />{" "}
               </m.a>
               <m.a
                 href={hero.personal.resume}
                 download="Jayesh_Rakhonde_Resume.pdf"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="group bg-bg-secondary px-5 py-2.5 flex items-center justify-center gap-2 font-medium text-accent border border-card-border rounded-md hover:bg-accent hover:text-button-text-secondary hover:shadow-button transition duration-500"
+                className="group bg-bg-secondary px-5 py-2.5 flex items-center justify-center gap-2 font-medium text-accent border border-card-border rounded-md hover:bg-accent hover:text-button-text-secondary hover:shadow-button active:bg-accent active:text-button-text-secondary active:shadow-button transition duration-500"
               >
                 Download Resume
                 <FiDownload className="group-hover:translate-y-1 transition duration-500" />
@@ -112,7 +115,7 @@ const Hero = () => {
                     transition={{ duration: 0.4 }}
                     whileHover={{ y: -4, scale: 1.08 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-bg-card p-2 text-2xl text-accent border border-card-border rounded-full hover:text-text-main hover:bg-accent hover:border-card-hover hover:shadow-button  transition duration-500"
+                    className="bg-bg-card p-2 text-2xl text-accent border border-card-border rounded-full hover:text-text-main hover:bg-accent hover:border-card-hover hover:shadow-button  active:text-text-main active:bg-accent active:border-card-hover active:shadow-button transition duration-500"
                   >
                     <Icons />
                   </m.a>

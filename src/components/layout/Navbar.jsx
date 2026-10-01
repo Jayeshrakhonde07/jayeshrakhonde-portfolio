@@ -104,7 +104,6 @@ const Navbar = () => {
             duration: 0.4,
             delay: 0.3,
           }}
-          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.9, rotate: 5 }}
           onClick={() => setMenu(!menu)}
           aria-controls="mobile-navigation"

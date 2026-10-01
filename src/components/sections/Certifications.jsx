@@ -32,7 +32,7 @@ const Certifications = () => {
                     delay: (index % 3) * 0.12,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="bg-bg-card border border-card-border overflow-hidden rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
+                  className="bg-bg-card border border-card-border overflow-hidden rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2   active:border-card-hover active:shadow-card active:-translate-y-2  transition duration-500"
                 >
                   {/*certificates image*/}
                   <m.div
@@ -128,10 +128,10 @@ const Certifications = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
-                        className="group bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:shadow-button hover:text-text-main transition duration-500"
+                        className="group bg-accent px-4 py-2 flex items-center justify-center gap-2 rounded-md text-button-text-primary font-bold hover:shadow-button hover:text-button-text-secondary active:shadow-button active:text-button-text-secondary  transition duration-500"
                       >
                         View Certificate{" "}
-                        <FaArrowRightToBracket className="group-hover:translate-x-1 transition duration-500" />
+                        <FaArrowRightToBracket className="group-hover:translate-x-1 group-active:translate-x-1 transition duration-500" />
                       </m.a>
                     </m.div>
                   </div>

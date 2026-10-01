@@ -27,7 +27,7 @@ const Projects = () => {
               <ScrollReveal key={project.id} delay={(index % 3) * 0.12}>
                 <m.div
                   transition={{ duration: 0.4 }}
-                  className="h-full overflow-hidden flex flex-col bg-bg-card border border-card-border rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2 transition duration-500"
+                  className="h-full overflow-hidden flex flex-col bg-bg-card border border-card-border rounded-xl hover:border-card-hover hover:shadow-card hover:-translate-y-2  active:border-card-hover active:shadow-card active:-translate-y-2 transition duration-500"
                 >
                   {/* project image  */}
                   <m.div
@@ -109,7 +109,7 @@ const Projects = () => {
                         return (
                           <m.span
                             key={tech}
-                            className="text-xs bg-badge px-2 py-1 text-accent border border-card-border rounded-md font-semibold hover:bg-badge-hover hover:text-bright-accent hover:border-bright-accent transition duration-500"
+                            className="text-xs bg-badge px-2 py-1 text-accent border border-card-border rounded-md font-semibold hover:bg-badge-hover hover:text-bright-accent hover:border-bright-accent active:bg-badge-hover active:text-bright-accent active:border-bright-accent  transition duration-500"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
@@ -140,7 +140,7 @@ const Projects = () => {
                         href={project.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-1 items-center justify-center gap-3 bg-accent px-4 py-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button transition duration-500"
+                        className="flex flex-1 items-center justify-center gap-3 bg-accent px-4 py-2 rounded-md text-button-text-primary font-bold hover:text-button-text-secondary hover:shadow-button active:text-button-text-secondary active:shadow-button  transition duration-500"
                       >
                         Live Demo{" "}
                         <FaArrowUpRightFromSquare className="text-sm" />
@@ -150,14 +150,13 @@ const Projects = () => {
                       <m.a
                         whileHover={{
                           scale: 1.1,
-                          rotate: 5,
                         }}
                         whileTap={{ scale: 0.9 }}
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`View ${project.title} source code on GitHub`}
-                        className="text-2xl border border-card-border p-3 rounded-full hover:text-accent  hover:border-card-hover transition duration-500"
+                        className="text-2xl border border-card-border p-3 rounded-full hover:text-accent  hover:border-card-hover active:text-accent active:border-card-hover transition duration-500"
                       >
                         <FaGithub />
                       </m.a>

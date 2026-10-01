@@ -79,7 +79,7 @@ const MessageForm = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
+        className="bg-bg-card border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 active:border-card-hover active:shadow-card active:-translate-y-1  transition duration-500"
       >
         <m.div
           initial={{ opacity: 0, x: -20 }}
@@ -250,7 +250,7 @@ const MessageForm = () => {
             disabled={isSending}
             whileHover={!isSending ? { scale: 1.02 } : {}}
             whileTap={!isSending ? { scale: 0.98 } : {}}
-            className={`bg-accent w-full px-4 py-2 rounded-md flex items-center justify-center gap-2 text-button-text-primary font-bold hover:shadow-button hover:text-text-main transition duration-500 ${
+            className={`bg-accent w-full px-4 py-2 rounded-md flex items-center justify-center gap-2 text-button-text-primary font-bold hover:shadow-button hover:text-button-text-secondary active:shadow-button active:text-button-text-secondary    transition duration-500 ${
               isSending ? "opacity-70 cursor-not-allowed" : "cursor-pointer"
             }`}
           >

@@ -2,6 +2,7 @@ import SectionTitle from "../common/SectionTitle";
 import UsePortfolio from "../../hooks/UsePortfolio";
 import ScrollReveal from "../common/ScrollReveal";
 import { m } from "framer-motion";
+
 const About = () => {
   const { about } = UsePortfolio();
 
@@ -19,11 +20,12 @@ const About = () => {
         />
 
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-6 mt-4">
+          {/* My introduction card  */}
           <ScrollReveal direction="left">
             {/*information about me */}
             <m.div
               transition={{ duration: 0.4 }}
-              className="bg-bg-card/70 border border-card-border p-4 md:p-6 rounded-md backdrop-blur-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
+              className="bg-bg-card/70 border border-card-border p-4 md:p-6 rounded-md backdrop-blur-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 active:shadow-card  active:-translate-y-1  active:border-card-hover transition duration-500"
             >
               <m.h2
                 initial={{ opacity: 0, y: 15 }}
@@ -128,16 +130,12 @@ const About = () => {
                           duration: 0.5,
                           delay: index * 0.1,
                         }}
-                        className="group bg-bg-card flex items-center gap-3 px-3 py-2 border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
+                        className="group bg-bg-card flex items-center gap-3 px-3 py-2 border border-card-border rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 active:shadow-card  active:-translate-y-1  active:border-card-hover transition duration-500"
                       >
                         {/* info icon  */}
                         <m.div
-                          whileHover={{
-                            scale: 1.1,
-                            rotate: 5,
-                          }}
                           transition={{ duration: 0.3 }}
-                          className="bg-badge p-3 rounded-md border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-300"
+                          className="bg-badge p-3 rounded-md border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover group-active:bg-badge-hover  group-active:text-bright-accent  group-active:border-card-hover   transition duration-300"
                         >
                           <Icon aria-hidden="true" />
                         </m.div>
@@ -185,7 +183,7 @@ const About = () => {
                           duration: 0.5,
                           delay: index * 0.1,
                         }}
-                        className="bg-bg-card border border-card-border rounded-md p-2 text-center hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
+                        className="bg-bg-card border border-card-border rounded-md p-2 text-center hover:border-card-hover hover:shadow-card hover:-translate-y-1 active:-translate-y-1 active:border-card-hover  active:shadow-card  transition duration-500"
                       >
                         {/* card number  */}
                         <m.span

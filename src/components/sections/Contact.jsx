@@ -20,7 +20,6 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
           <ScrollReveal direction="left">
             <div className="w-full">
-
               {/* left content  */}
               <div className="text-center  md:text-start  ">
                 <m.h3
@@ -50,7 +49,6 @@ const Contact = () => {
               </div>
 
               <div className="flex flex-col gap-4 mt-4">
-
                 {/* contact links  */}
                 {contact.contactLinks.map((link, index) => {
                   const Icons = link.icon;
@@ -75,21 +73,20 @@ const Contact = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group bg-bg-card border border-card-border flex items-center px-3 py-2 gap-3 rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 transition duration-500"
+                        className="group bg-bg-card border border-card-border flex items-center px-3 py-2 gap-3 rounded-md hover:border-card-hover hover:shadow-card hover:-translate-y-1 active:border-card-hover active:shadow-card active:-translate-y-1  transition duration-500"
                       >
                         {/* contact icons  */}
                         <m.div
                           whileHover={{
                             scale: 1.1,
-                            rotate: 5,
                           }}
                           transition={{ duration: 0.3 }}
-                          className="bg-badge p-3 rounded-full border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent  group-hover:border-card-hover transition duration-500"
+                          className="bg-badge p-3 rounded-full border text-accent border-card-border group-hover:bg-badge-hover group-hover:text-bright-accent   group-hover:border-card-hover group-active:bg-badge-hover group-active:text-bright-accent  group-active::border-card-hover transition duration-500"
                         >
                           <Icons className="text-xl" aria-hidden="true" />
                         </m.div>
 
-                            {/* contact informations  */}
+                        {/* contact informations  */}
                         <m.div
                           initial={{ opacity: 0, x: -10 }}
                           whileInView={{
@@ -114,7 +111,6 @@ const Contact = () => {
               </div>
             </div>
           </ScrollReveal>
-
 
           {/* message form component  */}
           <MessageForm />

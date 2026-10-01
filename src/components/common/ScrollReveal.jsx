@@ -1,7 +1,6 @@
-import { m,useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 const ScrollReveal = ({
-
   children,
   direction = "up",
   delay = 0,
