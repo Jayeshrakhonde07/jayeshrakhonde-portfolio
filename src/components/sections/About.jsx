@@ -95,7 +95,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-text-body text-justify [hyphens:auto] "
+                className="text-text-body text-justify [hyphens:auto]"
               >
                 I’ve built projects like a{" "}
                 <span className="text-text-main font-medium">

@@ -50,7 +50,7 @@ const Certifications = () => {
                       alt={`${certificate.title} certificate`}
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.5 }}
-                      className="w-full object-cover rounded-t-2xl"
+                      className="w-full object-cover rounded-t-xl"
                       loading="lazy"
                     />
                   </m.div>

@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 const contact = {
   heading: "Let's Connect",
   description:
-    "Have a project in mind? Whether you have a project idea, collaboration opportunity or simply want to connect, feel free to send me a message",
+    "Have a project in mind? Whether you have a project idea, collaboration opportunity or simply want to connect, feel free to send me a message.",
   contactLinks: [
     {
       id: 1,

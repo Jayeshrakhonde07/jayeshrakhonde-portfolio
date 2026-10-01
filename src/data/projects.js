@@ -27,7 +27,7 @@ const projects = [
       "Fully responsive multi-section layout",
     ],
     technologies: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
-    liveDemo: "",
+    liveDemo: "https://jayeshrakhonde.vercel.app/",
     github: "https://github.com/Jayeshrakhonde07/jayeshrakhonde-portfolio.git",
   },
 ];
