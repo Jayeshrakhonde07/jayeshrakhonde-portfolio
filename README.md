@@ -1,7 +1,8 @@
 # Jayesh Rakhonde | Personal Portfolio
 
 A modern, responsive personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, certifications, and professional profile. The website features smooth animations, interactive 3D visuals, dark and light themes, and a functional email contact form.
-<img src="./src/assets/images//projects/Portfolio.png" alt="Jayesh Rakhonde Personal Portfolio" width="900"/>
+
+<img width="1915" height="897" alt="image" src="./src/assets/images/projects/Portfolio.png" />
 
 🌐 **Live Demo:** [jayeshrakhonde.vercel.app](https://jayeshrakhonde.vercel.app/)
 
