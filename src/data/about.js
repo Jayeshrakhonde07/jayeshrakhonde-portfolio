@@ -4,7 +4,11 @@ import {
   FaLocationDot,
   FaCode,
 } from "react-icons/fa6";
+import { FaLaptopCode, FaCertificate, FaTools } from "react-icons/fa";
+import profileImg from "../assets/images/profile/Profile.png";
 const about = {
+  profile: profileImg,
+
   information: [
     { icon: FaUser, label: "Name", title: "Jayesh Kishor Rakhonde" },
     {
@@ -17,9 +21,9 @@ const about = {
   ],
 
   services: [
-    { number: "9+", feature: "Technologies" },
-    { number: "3+", feature: "Projects" },
-    { number: "7+", feature: "Certifications" },
+    { icon: FaLaptopCode, number: "9+", feature: "Technologies" },
+    { icon: FaTools, number: "3+", feature: "Projects" },
+    { icon: FaCertificate, number: "7+", feature: "Certifications" },
   ],
 };
 

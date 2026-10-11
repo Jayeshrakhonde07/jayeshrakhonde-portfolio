@@ -7,17 +7,33 @@ import javalogo from "../assets/icons/Java.png";
 import clogo from "../assets/icons/C.png";
 import gitlogo from "../assets/icons/Git.png";
 import githublogo from "../assets/icons/Github.png";
+import {
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaLaptopCode,
+  FaTools,
+} from "react-icons/fa";
+const skills = {
+  myskills: [
+    { id: 1, icon: htmlogo, label: "HTML5", category: "Frontend" },
+    { id: 2, icon: csslogo, label: "CSS3", category: "Frontend" },
+    { id: 3, icon: jslogo, label: "Javascript", category: "Frontend" },
+    { id: 4, icon: tailwindlogo, label: "Tailwind CSS", category: "Frontend" },
+    { id: 5, icon: reactlogo, label: "React", category: "Frontend" },
+    { id: 6, icon: javalogo, label: "Java", category: "Programming" },
+    { id: 7, icon: clogo, label: "C", category: "Programming" },
+    { id: 8, icon: gitlogo, label: "Git", category: "Tools" },
+    { id: 9, icon: githublogo, label: "Github", category: "Tools" },
+  ],
 
-const myskills = [
-  { id: 1, icon: htmlogo, label: "HTML5", category: "Frontend" },
-  { id: 2, icon: csslogo, label: "CSS3", category: "Frontend" },
-  { id: 3, icon: jslogo, label: "Javascript", category: "Frontend" },
-  { id: 4, icon: tailwindlogo, label: "Tailwind CSS", category: "Frontend" },
-  { id: 5, icon: reactlogo, label: "React", category: "Frontend" },
-  { id: 6, icon: javalogo, label: "Java", category: "Programming" },
-  { id: 7, icon: clogo, label: "C", category: "Programming" },
-  { id: 8, icon: gitlogo, label: "Git", category: "Tools" },
-  { id: 9, icon: githublogo, label: "Github", category: "Tools" },
-];
+  categoryIcons: {
+    Frontend: FaCode,
+    Backend: FaServer,
+    Database: FaDatabase,
+    Programming: FaLaptopCode,
+    Tools: FaTools,
+  },
+};
 
-export default myskills;
+export default skills;

@@ -3,32 +3,33 @@ import portfolioimg from "../assets/images/projects/Portfolio.png";
 const projects = [
   {
     id: 1,
-    image: spotifyimg,
-    title: "Mini Spotify",
-    description: "Spotify-inspired music player with responsive UI .",
-    features: [
-      "Spotify-inspired music player interface",
-      "Play and pause audio tracks",
-      "Responsive design for different screen sizes",
-    ],
-    technologies: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "https://spotify-clone-puce-six.vercel.app/",
-    github: "https://github.com/Jayeshrakhonde07/Spotify-Clone.git",
-  },
-  {
-    id: 2,
     image: portfolioimg,
     title: "Personal Portfolio",
     description:
-      "Modern dark-themed portfolio website showcasing my skills, projects, and certifications.",
+      "Dark-themed portfolio with 3D visuals, smooth animations, and responsive design.",
     features: [
-      "Animated hero with typing effect",
-      "Resume download and social links",
-      "Fully responsive multi-section layout",
+      "Interactive 3D model with immersive visuals",
+      "Animated hero section with typing effect and smooth transitions",
+      "Resume download, social links, and EmailJS contact form",
     ],
     technologies: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
     liveDemo: "https://jayeshrakhonde.vercel.app/",
     github: "https://github.com/Jayeshrakhonde07/jayeshrakhonde-portfolio.git",
+  },
+  {
+    id: 2,
+    image: spotifyimg,
+    title: "Mini Spotify",
+    description:
+      "A lightweight Spotify-inspired music player with a responsive interface.",
+    features: [
+      "Clean and user-friendly music player UI",
+      "Play and pause audio tracks",
+      "Responsive design for all screen sizes",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveDemo: "https://spotify-clone-puce-six.vercel.app/",
+    github: "https://github.com/Jayeshrakhonde07/Spotify-Clone.git",
   },
 ];
 

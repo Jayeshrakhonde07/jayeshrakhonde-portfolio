@@ -5,11 +5,21 @@ import skills from "../data/skills";
 import projects from "../data/projects";
 import certifications from "../data/certifications";
 import contact from "../data/contact";
+import marqueeSkills from "../data/marquee";
+
 import { useMemo } from "react";
 
 const PortfolioProvider = ({ children }) => {
   const portfolioData = useMemo(
-    () => ({ hero, about, skills, projects, certifications, contact }),
+    () => ({
+      hero,
+      about,
+      skills,
+      projects,
+      certifications,
+      contact,
+      marqueeSkills,
+    }),
     [],
   );
 
