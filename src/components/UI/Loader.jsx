@@ -8,7 +8,7 @@ const Loader = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl sm:text-5xl font-bold text-accent mb-3"
+            className="text-4xl sm:text-5xl font-bold text-accent mb-3 font-heading"
           >
             Jayesh Rakhonde
           </m.h1>
@@ -17,7 +17,7 @@ const Loader = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-xl sm:text-2xl font-semibold text-text-main mb-8"
+            className="text-xl sm:text-2xl font-semibold text-text-main mb-6"
           >
             Welcome to My Portfolio
           </m.p>

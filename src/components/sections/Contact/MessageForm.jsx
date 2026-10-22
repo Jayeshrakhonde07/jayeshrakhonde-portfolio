@@ -85,7 +85,7 @@ const MessageForm = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-bg-card border border-card-border rounded-[20px] overflow-hidden transition-colors duration-300 hover:border-card-hover hover:shadow-card"
+        className="bg-bg-card border border-card-border rounded-xl overflow-hidden hover:border-card-hover hover:shadow-card transitions duration-500"
       >
         <m.div
           initial={{ opacity: 0, x: -20 }}
@@ -94,7 +94,7 @@ const MessageForm = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="border-b border-card-border p-4  flex items-center gap-4"
         >
-          <div className="bg-badge p-4 rounded-xl border border-card-border text-accent text-xl">
+          <div className="bg-badge p-4 rounded-lg border border-card-border text-accent text-xl hover:bg-badge-hover hover:border-card-hover hover:text-bright-accent transition duration-500">
             <FaPaperPlane aria-hidden="true" />
           </div>
           <div>

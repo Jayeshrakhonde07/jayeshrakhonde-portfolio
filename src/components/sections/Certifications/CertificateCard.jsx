@@ -85,7 +85,7 @@ const CertificateCard = () => {
                     duration: 0.5,
                     delay: 0.4,
                   }}
-                  className="mt-2 text-text-main font-semibold flex items-center gap-2"
+                  className="mt-1 text-text-main font-semibold flex items-center gap-2"
                 >
                   <FaRegCalendarCheck className="text-accent" />
                   <span className="text-text-body">Issued: </span>

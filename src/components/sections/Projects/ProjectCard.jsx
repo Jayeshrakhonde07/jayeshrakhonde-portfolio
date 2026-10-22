@@ -35,12 +35,13 @@ const ProjectCard = () => {
 
               {/* project information  */}
               <div className="border-b border-card-border px-4 py-2">
+                {/* project title  */}
                 <m.h2
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-text-main text-xl md:text-2xl font-bold  mb-1"
+                  className="text-text-main text-xl md:text-2xl font-bold"
                 >
                   {project.title}
                 </m.h2>
@@ -51,7 +52,7 @@ const ProjectCard = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-sm md:text-[15px] leading-relaxed italic mb-2 text-text-body"
+                  className="text-sm md:text-[15px] leading-relaxed italic mb-1 text-text-body"
                 >
                   {project.description}
                 </m.p>

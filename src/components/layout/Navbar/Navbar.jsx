@@ -152,7 +152,7 @@ const Navbar = () => {
         duration: 0.7,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="w-full fixed top-0 px-6 md:px-8 lg:px-12 bg-bg-page/95 backdrop-blur-md z-50 shadow-desktop-menu"
+      className="w-full fixed top-0 px-6 md:px-8 lg:px-12 bg-bg-page/96 backdrop-blur-md z-50 shadow-desktop-menu"
     >
       <nav className="max-w-7xl mx-auto h-16 min-w-0 flex justify-between items-center">
         {/* Logo */}
