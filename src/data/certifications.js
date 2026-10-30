@@ -5,6 +5,7 @@ import reactImage from "../assets/images/certifications/React Certificate.png";
 import reactHackerRankImage from "../assets/images/certifications/React-Hackerrank.png";
 import gitImage from "../assets/images/certifications/Git Certificate.png";
 import githubImage from "../assets/images/certifications/Github Certificate.png";
+import AgrinexAI from "../assets/images/certifications/AgriNexAI.png";
 
 import htmlCertificate from "../assets/documents/certificates/HTML Certificate.pdf";
 import cssCertificate from "../assets/documents/certificates/CSS Certificate.pdf";
@@ -87,6 +88,18 @@ const certifications = [
       "Completed GitHub certification covering repositories, collaboration, version control, and GitHub workflows.",
     image: githubImage,
     credentialUrl: githubCertificate,
+  },
+
+  {
+    id: 8,
+    title: "Certificate of Research Paper Publication",
+    issuer: "IJIRT",
+    date: "November 2026",
+    description:
+      "Developed AgriNex AI as a final-year project and published its research paper in IJIRT, Volume 13, Issue 6 (ISSN: 2349-6002)",
+    image: AgrinexAI,
+    credentialUrl:
+      "https://drive.google.com/file/d/1DWVocj_-WIpyP0SYy3TRzb_thTEYqb2y/view?usp=drive_link",
   },
 ];
 
